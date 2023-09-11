@@ -4,16 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Css/Style.css">
+    <link rel="stylesheet" href="../Css/carrito_style.css">
     <title>Carrito | Funkoshop</title>
 </head>
 
 <body>
+    <div class="contenedor"></div>
     <header>
+        <picture>
+            <img src="../img/branding/logo_light_horizontal.svg" alt="Isotipo de la marca Funkoshop">
+        </picture>
         <nav>
-            <picture>
-                <img src="../img/branding/isotype.svg" alt="Isotipo de la marca Funkoshop">
-            </picture>
             <ul>
                 <li>
                     <a href="../pages/shop.html">SHOP</a>
@@ -25,118 +26,156 @@
                     <a href="../pages/login.html">LOGIN</a>
                 </li>
                 <li>
-                    <a href="../pages/carrito.html">CARRITO</a>
+                    <a href="../pages/carrito.html">
+                        <picture>
+                            <img src="../img/icons/cart-icon.svg" alt="Icono del carrito de compras">
+                        </picture>
+                    </a>
                     <!-- Pregunta: cómo hago para mostrar la cantidad de items agregados al carrito? -->
                 </li>
             </ul>
         </nav>
     </header>
 
-    <body>
-        <section>
-            <h1>CARRITO DE COMPRAS</h1>
+    <main>
+        <div id="main_page">
+            <div id="hero">
+                <h1>CARRITO DE COMPRAS</h1>
+            </div>
             <!-- Encabezado de la tabla del carrito-->
-            <article>
-                <ul>
-                    <li>
-                        <h3>DETALLE DEL PRODUCTO</h3>
-                    </li>
-                    <li>
-                        <h3>CANTIDAD</h3>
-                    </li>
-                    <li>
-                        <h3>TOTAL</h3>
-                    </li>
-                </ul>
-            </article>
-            <article>
-                <a href="../pages/shop.html">
-                    <picture>
-                        <img src="../Img/star-wars/baby-yoda-1.webp" alt="Imagen de Baby Yoda en item de carrito">
-                    </picture>
-                    <h3>BABY YODA BLUEBALL</h3>
-                    <h4>STAR WARS</h4>
-                    <h5>precio: $ 1799,99</h5>
+            <section id="productos">
+                <table>
+                    <tr id="columnas">
+                        <td>
+                            <h3>DETALLE DEL PRODUCTO</h3>
+                        </td>
+                        <td>
+                            <h3>CANTIDAD</h3>
+                        </td>
+                        <td>
+                            <h3>TOTAL</h3>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr id="cart_item">
+                        <td>
+                            <a href="../pages/shop.html">
+                                <picture>
+                                    <img src="../Img/star-wars/baby-yoda-1.webp" id="imagen_item"
+                                        alt="Imagen de Baby Yoda en item de carrito">
+                                </picture>
+                                <div>
+                                    <h3>BABY YODA BLUEBALL</h3>
+                                    <h4>STAR WARS</h4>
+                                    <h5>precio: $ 1799,99</h5>
+                                </div>
+                            </a>
+                        </td>
+                        <td>
+                            <div>
+                                <button>+</button>
+                                <button>-</button>
+                                <input type="number" value="2">
+                            </div>
+                        </td>
+                        <td>
+                            <h3>$ 3.599,98</h3>
+                        </td>
+                        <td>
+                            <button>
+                                <img src="../img/icons/delete_trash.svg" alt="Icono de borrar item">
+                                <!--No esta el icono de borrar que esta en el Figma-->
+                            </button>
+                        </td>
+                    </tr>
+                    <tr id="cart_item">
+                        <td>
+                            <a href="../pages/shop.html">
+                                <picture>
+                                    <img src="../img/pokemon/pidgeotto-1.webp" id="imagen_item"
+                                        alt="Imagen de Baby Yoda en item de carrito">
+                                </picture>
+                                <div>
+                                    <h3>PIDGEOTTO</h3>
+                                    <h4>POKEMON</h4>
+                                    <h5>Precio Unitario: $ 1799,99</h5>
+                                </div>
+                            </a>
+                        </td>
+                        <td>
+                            <div>
+                                <button>+</button>
+                                <button>-</button>
+                                <input type="number" value="1">
+                            </div>
+                        </td>
+                        <td>
+                            <h3>$ 1.799,99</h3>
+                        </td>
+                        <td>
+                            <button>
+                                <img src="../img/icons/delete_trash.svg" alt="Icono de borrar item">
+                                <!--No esta el icono de borrar que esta en el Figma-->
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section id="resumen">
+                <h1>RESUMEN</h1>
+                <table>
+                    <tr>
+                        <td>
+                            <h4>CANTIDAD DE ELEMENTOS</h4>
+                        </td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>SUBTOTAL</h4>
+                        </td>
+                        <td>$ 5.399,97</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>ENVIO</h4>
+                        </td>
+                        <td>$ 0,00</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>TOTAL</h3>
+                        </td>
+                        <td>$ 5.399,97</td>
+                    </tr>
+                </table>
+                <a href="../pages/pagar.html">
+                    <button id="boton_ir_a_pagar">IR A PAGAR</button>
                 </a>
-                <div>
-                    <button>+</button>
-                    <button>-</button>
-                    <input type="number" value="2">
-                </div>
-                <h3>$ 3.599,98</h3>
-                <button>
-                    <img src="../img/icons/delete_trash.svg" alt="">
-                    <!--No esta el icono de borrar que esta en el Figma-->
-                </button>
-            </article>
-            <article>
-                <a href="../pages/shop.html">
-                    <picture>
-                        <img src="../img/pokemon/pidgeotto-1.webp" alt="Imagen de Baby Yoda en item de carrito">
-                    </picture>
-                    <h3>PIDGEOTTO</h3>
-                    <h4>POKEMON</h4>
-                    <h5>Precio Unitario: $ 1799,99</h5>
-                </a>
-                <div>
-                    <button>+</button>
-                    <button>-</button>
-                    <input type="number" value="1">
-                </div>
-                <h3>$ 1.799,99</h3>
-                <button>
-                    <img src="../img/icons/delete_trash.svg" alt="">
-                    <!--No esta el icono de borrar que esta en el Figma-->
-                </button>
-            </article>
-        </section>
-        <section>
-            <h1>RESUMEN</h1>
-            <ul>
-                <li>
-                    <h4>CANTIDAD DE ELEMENTOS</h4>
-                </li>
-                <li>3</li>
-                <li>
-                    <h4>SUBTOTAL</h4>
-                </li>
-                <li>$ 5.399,97</li>
-                <li>
-                    <h4>ENVIO</h4>
-                </li>
-                <li>$ 0,00</li>
-                <li>
-                    <h3>TOTAL</h3>
-                </li>
-                <li>$ 5.399,97</li>
-            </ul>
-        </section>
-    </body>
+            </section>
+        </div>
+    </main>
 
     <footer>
-        <section>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="../pages/shop.html">SHOP</a>
-                    </li>
-                    <li>
-                        <a href="../pages/register.html">REGISTRARSE</a>
-                    </li>
-                    <li>
-                        <a href="../pages/login.html">LOGIN</a>
-                    </li>
-                    <li>
-                        <a href="../pages/contact.html">CONTACTO</a>
-                    </li>
-                </ul>
-                <picture>
-                    <img src="../img/branding/isotype.svg" alt="Isotipo de la marca Funkoshop">
-                </picture>
-            </nav>
-            <p>All rights reserved 2022 - Funkoshop &copy;</p>
-        </section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../pages/shop.html">SHOP</a>
+                </li>
+                <li>
+                    <a href="../pages/register.html">INGRESAR</a>
+                </li>
+                <li>
+                    <a href="../pages/contact.html">CONTACTO</a>
+                </li>
+            </ul>
+            <picture>
+                <img src="../img/branding/isotype.svg" alt="Isotipo de la marca Funkoshop">
+            </picture>
+        </nav>
+        <p>All rights reserved 2022 - Funkoshop &copy;</p>
     </footer>
+    </div>
 </body>
 
 </html>
